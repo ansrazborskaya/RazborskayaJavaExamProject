@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="1024.0" styleClass="bodybg" stylesheets="@../../src/back.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.stormnet.figuresfx.controller.MainScreenViewController">
+    <children>
+        <Canvas fx:id="canvas" height="600.0" layoutX="250.0" layoutY="170.0" onMouseClicked="#onMouseClicked"
+                width="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <MenuButton contentDisplay="BOTTOM" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" prefHeight="34.0"
+                    prefWidth="88.0" text="MENU" textAlignment="CENTER" underline="true">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#deleteLastShape" text="DELETE LAST SHAPE"/>
+                <MenuItem mnemonicParsing="false" onAction="#returnLastShape" text="RETURN LAST SHAPE"/>
+                <MenuItem mnemonicParsing="false" onAction="#clearField" text="CLEAR"/>
+            </items>
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+            <effect>
+                <DropShadow color="#978a8a" height="12.1" radius="8.515" spread="0.08" width="23.96"/>
+            </effect>
+            <textFill>
+                <LinearGradient cycleMethod="REFLECT" endX="0.7571428571428571" endY="0.7380952380952381"
+                                startX="0.5476190476190477" startY="0.1476190476190476">
+                    <stops>
+                        <Stop color="#eb2acd"/>
+                        <Stop color="#3a27b8" offset="1.0"/>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </MenuButton>
+    </children>
+</AnchorPane>
